@@ -1,0 +1,133 @@
+#data structure
+#list,tuple,set,dictionary
+
+#1)list - variable using square bracket '[]'
+#list - ordered, changeable and allow duplicate values
+#changeable (add, edit and remove)
+#please make sure backup your original variable by create new variable
+fruitList = ["apple", "banana", "cherry"]
+fruitDupli = ["apple", "banana", "cherry", "apple", "banana", "cherry"] #allow duplicate values
+theList = ["apple", "banana", "cherry", 40, 30.6, True]
+print(fruitList)
+print(fruitDupli)
+print(len(fruitDupli))
+print(theList)
+print(fruitList[2])
+if "banana" in fruitList:
+    print("yes there is a banana")
+
+fruitList[1] = "strawberry" #change list item
+print(fruitList)
+
+fruitDupli[1:4]= ["kiwi", "lemon", "apricot"]
+print(fruitDupli)
+
+fruitDupli.insert(3, "mango")
+print(fruitDupli)
+
+fruitDupli.append("grape")
+print(fruitDupli)
+
+fruitList.extend(theList)
+print(fruitList)
+
+fruitList.remove("strawberry")
+print(fruitList)
+
+fruitList.remove("apple") #if have same item, only remove the 1st appearance.
+print(fruitList)
+
+fruitList.pop(6)
+print(fruitList)
+
+del fruitList[1]
+print(fruitList)
+
+fruitList.clear()
+print(fruitList)
+
+#2)tuple - variable using round bracket '()'
+#tuple - ordered, allow duplicate value, unchangeable
+#case-study: use for private data
+
+thisTuple = ("apple", "banana", "cherry", "apple", "rambutan")
+print(thisTuple)
+print(len(thisTuple))
+print(thisTuple[1])
+
+if "durian" in thisTuple:
+    print("yes, rambutan is in the tuple")
+else:
+    print("no, there is no data in the tuple")
+
+#change tuple to list
+
+thisListChg = list(thisTuple)
+thisListChg[1] = "langsat" #change at slicing 1
+thisTupleNew = tuple(thisListChg)
+print(thisTuple)
+print(thisTupleNew)
+
+#3)set - unordered, unchangeable (remove and add) and cannot duplicate allowed.
+#unchangeable but not to strict compare to tuple
+#set - curly bracket `{}`
+thisSet = {"karipap", "satay", "laksa", "karipap", "satay", "laksa"}
+thisSet2 = {"india", "pakistan", "uzbakistan", "nigeria"}
+print(thisSet)
+print(len(thisSet))
+
+thisSet.add("roti")
+print(thisSet)
+
+thisSet.update(thisSet2)
+print(thisSet)
+
+thisSet.remove("roti")
+print(thisSet)
+
+thisSet.discard("india")
+print(thisSet)
+
+# thisSet.clear()
+# print(thisSet)
+
+# del thisSet
+# print(thisSet)
+
+#4)dictionary - ordered, changeable, not allowed duplicate value
+#keep data in key:value
+#the system recognise key intead value
+
+carInfo = {
+    "brand": "ford",
+    "model": "mustang",
+    "year": 1964,
+    "year": 2000, #same key, the value will take a latest
+    "color": "red",
+    "type": "sedan"
+}
+print(carInfo)
+print(carInfo["model"])
+print(len(carInfo))
+print(carInfo.get("model"))
+
+carInfo["color"] = "green"
+print(carInfo)
+
+carInfo.update({"type":"suv"})
+print(carInfo)
+
+carInfo["warranty"] = 5
+print(carInfo)
+
+carInfo.update({"made": "malaysia"})
+print(carInfo)
+
+carInfo.pop("model")
+print(carInfo)
+
+del carInfo["warranty"]
+print(carInfo)
+
+carInfo.clear()
+print(carInfo)

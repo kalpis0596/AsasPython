@@ -1,0 +1,127 @@
+import random
+#python variables - a place to store a data
+# basic structure of programming : input -> process -> output
+#create variable name meaningful
+#if using a same variable name, will take a last data 
+storeOne = 5 #integer data type
+storeOne = 10 #<-- will overwrite latest data
+print(storeOne)
+
+#to store 'string', make sure 'double("")' quote
+storeText = "John" #string data type
+print(storeText)
+
+#float data type
+#3 important data type: interger,string and float
+storeFloatingNumber = 100.56 #float data type
+print(storeFloatingNumber)
+
+#'casting' is a method to change data type to another data type
+convertStr = str(storeOne) #convert to string
+convertFloat = float(storeOne) #convert to float
+convertInt = int(storeFloatingNumber) #convert to integer
+print(convertStr)
+print(convertFloat)
+print(convertInt)
+
+# variable name need to start with letter or underscore '_' /
+# cannot start with number
+# variable name only can alphnumeric, number and underscore only
+# case sensetive
+# variable name cannot have any python keyword.
+
+hello_store = 2
+print(hello_store)
+
+_helloStore = 4
+print(_helloStore)
+
+age = 20
+AGE = 40
+Age = 60
+
+print(age)
+print(AGE)
+print(Age)
+
+#standardise format for variable name
+#camel-case - start with lower-case next word start with hi-case
+myNameIs = "khairul"
+
+#pascal-case - same like camel case but start with capital
+MyNameIs = "john"
+
+#snake-case - word connected with underscore
+my_name_is = "jane"
+
+#how to store multiple value
+#1)many values to multiple variable - make sure variable name and value is same quantity
+first_var,second_var,third_var = "orange", "banana", "cherry"
+print(first_var)
+print(second_var)
+print(third_var)
+
+#2)one value to multiple variable
+fourth_var = fifth_var = sixth_var = "apple"
+print(fourth_var)
+print(fifth_var)
+print(sixth_var)
+
+#to know data type
+print(type(fourth_var))
+print(type(age))
+
+#random number
+#need to import module 1st
+print(random.randrange(1, 100))
+
+storeRandom = random.randrange(1, 100)
+print(storeRandom)
+
+#slicing string
+sampleText = "Hello, world!"
+print(sampleText[7:12])
+print(sampleText[:7]) #[:5] same [0:5]
+print(sampleText[:])
+print(sampleText[7:])
+
+print(sampleText[-7:0])
+print(sampleText[-7:-1])
+
+#modify string
+stringModification = "Hello, world!"
+stringSpaceMofication = "     My name is jong"
+
+print(stringModification.upper())
+print(stringModification.lower())
+
+print(stringSpaceMofication)
+print(stringSpaceMofication.strip())
+
+print(stringModification.replace("l", "p"))
+
+#concatenate String ( variable value cannot combine with num and alphnumeric)
+stringOne = "hello"
+stringTwo = "world"
+stringThree = stringOne + " " + stringTwo
+print(stringThree)
+
+numOne = 10
+numTwo = 20
+numThree = numOne + numTwo
+print(numThree)
+
+#operator: arithmetic (+ - * / % **), assignment(= += -= /= %=), comparison(== != > < >= <=), logical, identity, membership, bitwise.
+#first 4 operator are common use.
+
+#arithmetic
+numFour = 50
+numFive = 50
+numFour + numFive
+
+#assignment
+numFour +=20 #same as --> numFour = numFour + 20
+
+#comparison
+print(numFour == numFive) #statment numFour is `equal to` numFive
+print(numFour != numFive) #statment numFour is `not equal to` numFive

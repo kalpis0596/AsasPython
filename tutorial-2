@@ -1,0 +1,162 @@
+#operator: arithmetic (+ - * / % **), assignment(= += -= /= %=), comparison(== != > < >= <=), logical(and,or,not), identity, membership, bitwise.
+#first 4 operator are common use.
+
+#arithmetic
+numFour = 50
+numFive = 50
+numFour + numFive
+
+#assignment
+numFour +=20 #same as --> numFour = numFour + 20
+
+#comparison
+print(numFour == numFive) #statment numFour is `equal to` numFive
+print(numFour != numFive) #statment numFour is `not equal to` numFive
+
+#logical - combine two statment.
+#statement = Condition
+
+#True and Flase = False
+#True and True = True
+#False and True = False
+#False and False = False
+
+#True or Flase = True
+#True or True = True
+#False or True = True
+#False or False = False
+
+print(numFour>100 and numFive<100)
+print(numFour>100 or numFive<100)
+print(not(numFour>100 or numFive<100))
+
+#looping
+#2 types of looping : 1. for loop 2. while loop
+
+#array = list
+#multiple variable
+fruits = ["apple", "banana", "cherry"]
+for typeFruit in fruits:
+    print(typeFruit)
+    print(numFive)
+
+print(numFive)
+
+#single variable
+fruit = "Durian"
+for fruit_var in fruit:
+    print(fruit_var)
+
+#break syntax - if true, `break` stop print
+for typeFruit in fruits:
+    print(typeFruit)
+    if typeFruit == "banana":
+        break #kalau jumpa break, dia akan exit terus for loop tersebut
+print(numFive)
+
+#continue syntax - if true, 'continue' stop print
+for typeFruit in fruits:
+    if typeFruit == "banana":
+        continue #kalau jumpa continue, dia akan skip code yg selebihnya
+    print(typeFruit)
+
+# for count_number in range(6):
+#     print(count_number)
+
+# for count_number in range(4,10):
+#     print(count_number)
+
+for count_number in range(2, 100, 2):
+    print(count_number)
+
+#nested loop
+#nested not recommended in program cause not really efficent in data structure.
+#outer and inner loop is decide by which for loop start argument first
+colors = ["red", "blue", "green"] #outer loop
+countries = ["france", "spain", "argentina"] #inner loop
+
+# for store_data in colors:
+#     for store_data2 in countries:
+#         print(store_data, store_data2)
+
+#break syntax in inner loop, only exit inner loop
+
+for store_data in colors:
+    for store_data2 in countries:
+        if store_data2 == "spain":
+            break
+        print(store_data, store_data2)
+
+#while loop
+#same as for 'loop', only different write pattern code.
+
+# temp_data = 1
+# while temp_data < 10:
+#     print(temp_data)
+#     temp_data += 1 #temp_data = temp_data + 1
+
+temp_data2 = 1
+while temp_data2 < 5:
+    print(temp_data2)
+    if temp_data2 == 3:
+        break
+    temp_data2 += 1
+
+temp_data3 = 0
+while temp_data3 < 5:
+    temp_data3 += 1
+    if temp_data3 == 3:
+        continue
+    print(temp_data3)
+
+#if elif else statement
+numSix = 50
+numSeven = 50
+
+if numSix > numSeven:
+    print("numSix is greater than numSeven")
+elif numSix < numSeven:
+    print("numSix is less than numSeven")
+elif numSix == numSeven:
+    print("numSix is equal to numSeven")
+else:
+    print("numSix not equal to numSeven")
+
+#nested if statment
+numEight = 100
+if numEight > 10:
+    print("above 10")
+    if numEight > 50:
+        print("above 50")
+    else:
+        print("not above 50")
+
+#function
+def my_function():
+    print("Hello my name is khairul")
+
+my_function()
+
+def my_function1():
+    firstNum = 10
+    secondNum = 20
+    firstNum + secondNum * 2 /5 * 6
+
+my_function1()
+
+#fname called argument
+def print_my_name(fname): 
+    print("Hello my name is" +" "+ fname)
+
+#kapis called parameter
+print_my_name("kapis")
+print_my_name("kalpis")
+print_my_name("khafiz")
+
+def print_my_name_and_country(fname, country):
+    print("Hello my name is" + " " + fname + " " + country)
+
+#please make sure parameter and argument same qty
+print_my_name_and_country("kapis", "malaysia")
+print_my_name_and_country("kalpis", "africa")
+print_my_name_and_country("khafiz", "austria")
