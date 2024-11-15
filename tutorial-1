@@ -16,6 +16,10 @@ print(storeText)
 storeFloatingNumber = 100.56 #float data type
 print(storeFloatingNumber)
 
+#round data type
+storeRound = round(7.9) #round data type
+print(storeRound)
+
 #'casting' is a method to change data type to another data type
 convertStr = str(storeOne) #convert to string
 convertFloat = float(storeOne) #convert to float
