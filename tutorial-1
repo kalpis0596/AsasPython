@@ -111,6 +111,10 @@ numTwo = 20
 numThree = numOne + numTwo
 print(numThree)
 
+#print reverse word using slicing
+variable = "Hello World"
+print(variable[::-1])
+
 #operator: arithmetic (+ - * / % **), assignment(= += -= /= %=), comparison(== != > < >= <=), logical, identity, membership, bitwise.
 #first 4 operator are common use.
 
