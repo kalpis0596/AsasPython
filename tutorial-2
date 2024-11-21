@@ -75,17 +75,17 @@ for count_number in range(2, 100, 2):
 colors = ["red", "blue", "green"] #outer loop
 countries = ["france", "spain", "argentina"] #inner loop
 
-# for store_data in colors:
-#     for store_data2 in countries:
-#         print(store_data, store_data2)
+for store_data in colors:
+    for store_data2 in countries:
+        print(store_data, store_data2)
 
 #break syntax in inner loop, only exit inner loop
 
-for store_data in colors:
-    for store_data2 in countries:
-        if store_data2 == "spain":
-            break
-        print(store_data, store_data2)
+# for store_data in colors:
+#     for store_data2 in countries:
+#         if store_data2 == "spain":
+#             break
+#         print(store_data, store_data2)
 
 #while loop
 #same as for 'loop', only different write pattern code.
